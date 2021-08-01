@@ -26,6 +26,9 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
 
+$ ng new money-tracker --create-application=false --new-project-root=. --skip-install=true
+
 ng build
 tsc -p ./server/tsconfig.api.json
 node ./dist/api/bin/www
+
