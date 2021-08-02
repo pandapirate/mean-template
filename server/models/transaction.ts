@@ -40,6 +40,6 @@ transactionSchema.statics.build = (attr: ITransaction) => {
   return new Transaction(attr);
 };
 
-const Transaction = mongoose.model<any, transactionModelInterface>('transaction', transactionSchema);
+const Transaction = mongoose.model<any, transactionModelInterface>('Transaction', transactionSchema, 'transaction');
 
 export { Transaction };
