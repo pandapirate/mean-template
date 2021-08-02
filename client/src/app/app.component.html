@@ -2,7 +2,7 @@
   <div class="form-group" >
     <label for="name-input">Enter a name:</label>
     <input class="form-control" id="name-input" required [(ngModel)]="nameInput">
-    <button class="btn btn-primary"(click)="greetMe()">Greet Me</button>
+    <button mat-raised-button color="primary" (click)="greetMe()">Greet Me</button>
   </div>
   <div class="name-display">
     <p *ngIf="responseDisplay && responseDisplay.length > 0">
