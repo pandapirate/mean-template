@@ -3,14 +3,12 @@ import * as mongoose from 'mongoose';
 import * as path from 'path';
 
 import { Express } from 'express';
-import {todoRouter} from './routes/todo';
+import {transactionRouter} from './routes/transaction';
 
 export default function createApp(): Express {
     const app = express();
     const clientDir = path.join(__dirname, '../public');
     app.use(express.static(clientDir));
-    app.use(todoRouter);
-
     mongoose.connect('mongodb://localhost:27017/finance', {
       useCreateIndex: true,
       useNewUrlParser: true,
@@ -19,5 +17,6 @@ export default function createApp(): Express {
       console.log('Connected to MongoDB');
     });
 
+    app.use(transactionRouter);
     return app;
 }

@@ -13,7 +13,7 @@ export class AppComponent {
   responseDisplay: string = '';
 
   greetMe(): void {
-    this.http.get(`/api/${ this.nameInput }`)
+    this.http.get(`/api/todo/${ this.nameInput }`)
       .subscribe((response: any) => this.responseDisplay = response.greeting);
   }
 }
